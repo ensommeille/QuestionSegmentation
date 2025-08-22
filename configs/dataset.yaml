@@ -1,0 +1,25 @@
+# 试卷题目检测数据集配置文件
+# Dataset configuration for exam paper question detection
+
+# 数据集路径
+path: ../datasets  # 数据集根目录
+train: train/images  # 训练集图片路径
+val: val/images      # 验证集图片路径
+test: test/images    # 测试集图片路径
+
+# 类别数量
+nc: 1  # number of classes
+
+# 类别名称
+names:
+  0: question  # 题目
+
+# 数据集信息
+dataset_info:
+  name: "ExamPaperQuestionDetection"
+  description: "试卷题目检测数据集"
+  version: "1.0"
+  total_images: 1164
+  total_annotations: 7772
+  image_size: [2425, 1672]  # [height, width]
+  format: "YOLO"

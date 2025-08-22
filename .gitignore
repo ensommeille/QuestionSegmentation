@@ -1,0 +1,174 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+PIPFILE.lock
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Model files
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.weights
+*.h5
+*.pb
+*.tflite
+
+# Training outputs
+outputs/
+runs/
+wandb/
+tensorboard_logs/
+
+# Logs
+logs/
+*.log
+
+# Cache files
+*.cache
+.cache/
+
+# Test results
+test_results/
+results/
+predictions/
+
+# Data files (uncomment if you don't want to track datasets)
+data/
+datasets/
+# *.jpg
+# *.jpeg
+# *.png
+# *.bmp
+# *.tiff
+# *.gif
+
+# Annotations (uncomment if you don't want to track annotations)
+# *.json
+# *.xml
+# *.txt
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Documentation
+docs/_build/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Profiling data
+.prof
+
+# Database
+*.db
+*.sqlite3
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Node.js (if using any web interface)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Windows specific
+*.lnk
+WindowsPowerShell/
+
+# MacOS specific
+.AppleDouble
+.LSOverride
+Icon
+
+# Linux specific
+*~
+
+# Project specific
+quick_start_report.txt
+validation_results.json
+*.yaml.bak
+*.yml.bak
