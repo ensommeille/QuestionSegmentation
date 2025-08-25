@@ -102,7 +102,7 @@ class QuickStart:
         self.log("安装依赖包...")
         try:
             cmd = [sys.executable, '-m', 'pip', 'install', '-r', str(requirements_file)]
-            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='ignore', check=True)
             self.log("依赖包安装成功")
             return True
         except subprocess.CalledProcessError as e:
@@ -127,14 +127,14 @@ class QuickStart:
         
         try:
             cmd = [sys.executable, str(coco_script)]
-            result = subprocess.run(cmd, capture_output=True, text=True, check=True, cwd=str(self.project_root))
+            result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='ignore', check=True, cwd=str(self.project_root))
             self.log("数据转换完成")
             
             # 验证数据集
             prepare_script = self.project_root / 'scripts' / 'prepare_dataset.py'
             if prepare_script.exists():
                 cmd = [sys.executable, str(prepare_script), '--validate']
-                result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(self.project_root))
+                result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='ignore', cwd=str(self.project_root))
                 if result.returncode == 0:
                     self.log("数据集验证完成")
                 else:
@@ -193,7 +193,7 @@ class QuickStart:
             
             cmd = [sys.executable, str(train_script)]
             self.log("训练开始，这可能需要较长时间...")
-            result = subprocess.run(cmd, cwd=str(self.project_root))
+            result = subprocess.run(cmd, encoding='utf-8', errors='ignore', cwd=str(self.project_root))
             
             if result.returncode == 0:
                 self.log("模型训练完成")
@@ -244,7 +244,7 @@ class QuickStart:
                     '--conf', '0.5'
                 ]
                 
-                result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(self.project_root))
+                result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='ignore', cwd=str(self.project_root))
                 
                 if result.returncode == 0:
                     self.log(f"图片 {test_image.name} 分割成功")
